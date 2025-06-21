@@ -8,8 +8,10 @@ import matplotlib.pyplot as plt
 image = cv2.imread("inputs/input.jpg")
 
 # Task 1 - Intensity Level Reduction
-quantized = reduce_intensity_levels(image, 4)
-cv2.imwrite("outputs/quantized.jpg", quantized)
+for level in [2, 4, 8, 16]:
+    result = reduce_intensity_levels(image, level)
+    cv2.imwrite(f"outputs/quantized_{level}.jpg", result)
+
 
 # Task 2 - Smoothing
 for k in [3, 10, 20]:
