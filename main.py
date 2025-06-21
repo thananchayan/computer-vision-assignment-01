@@ -6,7 +6,6 @@ from utils.resolution import block_average
 import matplotlib.pyplot as plt
 
 image = cv2.imread("inputs/input.jpg")
-
 # Task 1 - Intensity Level Reduction
 for level in [2, 4, 8, 16]:
     result = reduce_intensity_levels(image, level)
